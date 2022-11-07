@@ -24,14 +24,20 @@
     <div id="title">
     <h1 class="title" id="titleName">Silvereen Games</h1>
     <script>
-        setTimeout(titleAdd1, 2000)
-        function titleAdd1() {
-            changeText("Presents", "titleName")
-            setTimeout(titleAdd2, 2000)
+        setCookie("titlePlayed", Number(0), 100)
+
+        if (getCookie("titlePlayed") == Number(0)) {
+            setTimeout(titleAdd1, 2000)
+            function titleAdd1() {
+                changeText("Presents", "titleName")
+                setTimeout(titleAdd2, 2000)
+            }
         }
+        
 
         function titleAdd2() {
             changeText("The Hackers Den", "titleName")
+            setCookie("titlePlayed", Number(1), 100)
         }
     </script>
     </div>
