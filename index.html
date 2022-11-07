@@ -24,6 +24,7 @@
     <div id="title">
     <h1 class="title" id="titleName">Silvereen Games</h1>
     <script>
+        console.log(getCookie("titlePlayed"))
         setCookie("titlePlayed", Number(0), 100)
 
         if (getCookie("titlePlayed") == Number(0)) {
@@ -38,6 +39,7 @@
         function titleAdd2() {
             changeText("The Hackers Den", "titleName")
             setCookie("titlePlayed", Number(1), 100)
+            console.log(getCookie("titlePlayed"))
         }
     </script>
     </div>
